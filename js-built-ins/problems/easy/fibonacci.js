@@ -39,12 +39,31 @@
 
 // Iterative Fibonacci function
 function fibonacci(n) {
-  // Your code here
+  if (n <= 0) return [];
+  if (n === 1) return [0];
+    let arr=[0,1]
+    prev=0
+    let curr=1
+    let i=0
+    while (i<n-2){
+      ans=curr+prev
+      arr.push(ans)
+      prev=curr
+    curr=ans
+    i+=1
+    }
+    return arr
 }
 
 // Recursive Fibonacci function
 function fibonacciRecursive(n) {
-  // Your code here
+    if(n==0){
+      return 0
+    }
+    if(n==1){
+      return 1
+    }
+    return fibonacciRecursive(n-1)+fibonacciRecursive(n-2)
 }
 
 module.exports = { fibonacci, fibonacciRecursive };

@@ -10,5 +10,5 @@ const updateCounter = () => {
   counter++;
   console.log(counter);
 };
-
+//
 setInterval(updateCounter, 1000);

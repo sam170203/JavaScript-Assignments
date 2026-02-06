@@ -19,7 +19,11 @@
 */
 
 function reverseString(str) {
-  // Your code here
+    if(str.length==0){
+      return str
+    }
+    let reversed=str.split("").reverse().join("")
+    return reversed
 }
 
 module.exports = reverseString;

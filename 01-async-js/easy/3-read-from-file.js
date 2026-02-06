@@ -5,3 +5,17 @@
 // Try to do an expensive operation below the file read and see how it affects the output. 
 // Make the expensive operation more and more expensive and see how it affects the output. 
 
+const fs = require("fs");
+
+console.log("Start");
+
+fs.readFile("test.txt", "utf-8", (err, data) => {
+    if (err) {
+        console.log("Error reading file");
+        return;
+    }
+    console.log("File content:");
+    console.log(data);
+});
+
+console.log("End");
